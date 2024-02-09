@@ -7,8 +7,8 @@ pipeline {
                 echo 'Building...'
 		
 		sh '''
-                  ./jenkins/build/mvn.sh mvn -DskipTests clean package
-                  ./jenkins/build/build.sh
+                  ./pipeline/build/mvn.sh mvn -DskipTests clean package
+                  ./pipeline/build/build.sh
                 '''
             }
         }
