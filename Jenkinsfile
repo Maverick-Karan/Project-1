@@ -34,6 +34,7 @@ pipeline {
         stage('Push') {
             steps {
                 echo 'Pushing...'
+		sh './jenkins/push/push.sh'
             }
         }
 
