@@ -4,7 +4,7 @@ echo "********************"
 echo "** Pushing Image ***" 
 echo "********************"
 
-export IMAGE="hkhcoder" 
+#export IMAGE="hkhcoder" 
 
 echo "*** Logging In ***"
 docker login -u maverick8266 -p $PASS 

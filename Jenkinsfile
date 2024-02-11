@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
       PASS = credentials('dockerhub-pass')
+      IMAGE = "hkhcoder"
    }
     
     stages {
