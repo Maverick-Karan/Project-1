@@ -4,9 +4,4 @@ services:
     image: "maverick8266/$IMAGE:$BUILD_NUMBER"
     container_name: webapp
   ports:
-      - "8080:8080"
-  networks:
-    - net
-
-networks:
-    net
+      - "8081:8080"
