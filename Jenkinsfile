@@ -45,6 +45,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
+		sh "export PASS='${env.PASS}'"
 		sh './pipeline/deploy/deploy.sh'
             }
         }
