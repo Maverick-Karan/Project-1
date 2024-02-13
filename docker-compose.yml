@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  jenkins:
+    image: jenkins-docker
+    container_name: jenkins
+    build:
+      context: machines
+      dockerfile: Dockerfile-jenkins
+    ports:
+      - "8083:8080"
+    volumes:
+      - /home/ubuntu/coder/jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - net
+  prod:
+    image: prod-ubuntu
+    container_name: prod
+    build:
+      context: machines
+      dockerfile: Dockerfile-prod
+    ports:
+      - "8082:8081"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - net
+
+networks:
+  net:
