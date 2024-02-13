@@ -3,7 +3,6 @@ pipeline {
     environment {
       PASS = credentials('dockerhub-pass')
       IMAGE = "hkhcoder"
-      BUILD_NUMBER = "$BUILD_NUMBER"
    }
     
     stages {
