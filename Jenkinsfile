@@ -45,6 +45,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
+		echo "PASS: ${env.PASS}"
 		sh './pipeline/deploy/deploy.sh'
             }
         }
